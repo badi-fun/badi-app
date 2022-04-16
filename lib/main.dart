@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:appwrite/appwrite.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Client client = Client();
+
+  client
+      .setEndpoint('https://appwrite.livingadventures.com.co/v1')
+      .setProject('5e8cf4f46b5e8');
   runApp(const MyApp());
 }
 
